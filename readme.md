@@ -7,7 +7,7 @@ used languages
 2. Css
 3. JavaScript
 
-### contribute
+### want to contribute?
 
 fork repo and make changes then send pull requests.
 
