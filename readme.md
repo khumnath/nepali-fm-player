@@ -7,7 +7,7 @@ used languages
 2. Css
 3. JavaScript
 
-### http and mixed content issue
+### http and https mixed content issue
 
 as chrome dont want to load mixed content.live demo may not load http media sources 
 on github page.however users can clone repo and use locally on pc without errors.
