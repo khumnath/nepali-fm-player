@@ -16,7 +16,7 @@ fork repo and make changes then send pull requests.
 on folder js/playlist.js file there are links for live streams.
 playlist format is:
  
-```
+```json
 {
                         src:'http://radionepal.gov.np:40100/stream',
                         name:'Radio Nepal',
