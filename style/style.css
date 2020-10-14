@@ -196,7 +196,7 @@ button:focus{
 
 .footer {
     font-size: small;
-    text-align: -webkit-center;
+    text-align: center;
     text-shadow: 1px 0px 2px #c30f0f;
 }
 
