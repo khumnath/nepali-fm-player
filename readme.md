@@ -9,9 +9,10 @@ used languages
 
 ### http and mixed content issue
 
-as browsers dont want to load mixed content.live demo may not load http media sources 
+as chrome dont want to load mixed content.live demo may not load http media sources 
 on github page.however users can clone repo and use locally on pc without errors.
 if one want to embed on website i would suggest not to use https on webpage because live streams are on http connection.
+as of today firefox loads page with showing not secure on addressbar.
 
 ### want to contribute?
 
