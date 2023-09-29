@@ -60,7 +60,19 @@ made with &hearts; by khumnath
 		</div>
 	</div>
 </div>
-
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('https://khumnath.github.io/nepali-fm-player/sw.js?v=4').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+</script>
 </body>
 </html>
 
