@@ -1,0 +1,13 @@
+{
+  "name": "nepali fm player",
+  "short_name": "nepali fm",
+  "start_url": "index.html",
+  "scope": "./",
+  "icons": [
+    {
+    }
+  ],
+  "theme_color": "#ffd31d",
+  "background_color": "#333",
+  "display": "standalone"
+}
