@@ -5,6 +5,8 @@
   "scope": "./",
   "icons": [
     {
+"src": "icon.png",
+      "sizes": "115x115"
     }
   ],
   "theme_color": "#ffd31d",
