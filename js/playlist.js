@@ -15,7 +15,7 @@ window.onload=function(){
                     {
                         src:'https://stream.zeno.fm/h527zwd11uquv',
                         name:'ujyalo 90 network',
-                        author:'90 MHZ kathymandu',
+                        author:'90 MHZ kathmandu',
                         cover:'https://unncdn.prixacdn.net/static/frontend/img/logo.png'
                     },
                     {

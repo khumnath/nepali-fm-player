@@ -135,12 +135,18 @@
         },
         calTtime(){
             let duration = this.music.duration;
-            let min = stream;
-            let sec = stream;//no need time for stream
+            let min = parseInt(duration / 60);
+            let sec = parseInt(duration - min * 60);
             if (sec < 10) {
                 sec = '0' + sec;
             }
+            if (isNaN(min) || isNaN(sec)) {
+                this.Ttime.innerHTML = 'live' + " " + 'stream';
+                return;
+            }
+            else {
             this.Ttime.innerHTML = min + ':' + sec;
+            }
         },
         changeTime(){
             let currentTime = this.music.currentTime;

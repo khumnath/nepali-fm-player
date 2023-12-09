@@ -11,12 +11,36 @@
 	margin: 10px auto;
 }
 .play-wrapper{
+      
 	display: flex;
+       flex-direction: column;
 	position: relative;
 	width: -webkit-fill-available;
 	border-bottom: 1px solid rgba(7,17,27,0.2);
-	background-color: #52034a;
+	background: linear-gradient(273deg, #0d0e0e, #e15723, #3423e1, #e123df, #3d9e13, #23c4e1);
+    background-size: 1200% 1200%;
+
+    -webkit-animation: gradient 25s ease infinite;
+    -moz-animation: gradient 25s ease infinite;
+    animation: gradient 25s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
+}
+@keyframes gradient {
+    0%{background-position:0% 51%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 51%}
 	flex-direction: column;
+    opacity: 0.8;
 }
 .play-wrapper img{
 	width: 220px;
@@ -59,8 +83,8 @@
 	/* line-height: 30px; */
 	/* text-align: center; */
 	border-radius: 50%;
-	color: #5be03a;
-	background-color: #52034a;
+	color: #fff;
+	background-color: #0a0a0a00;
 	cursor: pointer;
 	border:none;
 	-moz-box-shadow:-1px 0px 10px #333333;
@@ -78,7 +102,7 @@ button:focus{
 .play-wrapper .controls .progressBar{
 	width: 93px;
 	height: 11px;
-	background-color: rgb(238 238 243 / 80%);
+	background-color: #2a2e2f;
 	border-radius: 10px;
 	margin-left: auto;
 }
@@ -86,11 +110,11 @@ button:focus{
 	display: block;
 	width:0;
 	height: 11px;
-	background-color: #5be03a;
+	background-color: #fff;
 	border-radius: 4px;
 }
 .play-wrapper .controls .time{
-	color: #ffffff;
+	color: #fff;
 	/* font-size: large; */
 	margin-right: 5px;
 }
@@ -100,15 +124,15 @@ button:focus{
 	border: none;
 	width: 24px;
 	height: 34px;
-	background-color: #52034a;
-	color: #5be03a;
+	background-color: #0a0a0a00;
+	color: #fff;
 	font-size: x-large;
 }
 .play-wrapper .controls .vol{
 	vertical-align: middle;
 	width: 101px;
 	height: 11px;
-	background-color:  rgba(231,231,239,.8);
+	background-color:  #2a2e2f;
 	border-radius: 4px;
 	/* margin-left: 35px; */
 }
@@ -116,7 +140,7 @@ button:focus{
 	display: block;
 	width: 76%;
 	height: 11px;
-	background-color: #5be03a;
+	background-color: #fff;
 	border-radius: 10px;
 }
 .play-wrapper .controls .menu{
@@ -136,7 +160,7 @@ button:focus{
 .wrapper .mode span{
 	flex:1;
 	box-sizing: border-box;
-	color: #5be03a;
+	color: #fff;
 	height: 28px;
 	line-height: 20px;
 	font-size: x-large;
