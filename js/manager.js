@@ -135,8 +135,8 @@
         },
         calTtime(){
             let duration = this.music.duration;
-            let min = parseInt(duration / 60);
-            let sec = parseInt(duration - min * 60);
+            let min = stream;
+            let sec = stream;//no need time for stream
             if (sec < 10) {
                 sec = '0' + sec;
             }

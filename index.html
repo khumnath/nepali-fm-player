@@ -13,20 +13,32 @@
 <body>
 	<div class="wrapper">
 		<div class="play-wrapper">
-			<center><img class="cover" src="img/onair.jpg"></center>
-			<iframe src="audio/intro.mp3" type="audio/mp3" allow="autoplay" controls="false" type="audio" style="display:none"></iframe>
-		    <audio autoplay preload="auto" class="music" controls="true">
+			<center><img id="playing" class="cover" src="img/onair.jpg"></center>
+
+			<iframe src="audio/silence.mp3" type="audio/mp3" allow="autoplay" controls="false" type="audio" style="display:none"></iframe>
+		    <audio id="fm" preload="auto" class="music" controls autoplay>
 				  Your browser does not support the audio tag.
 			</audio>
 			<div class="detail">
 				<div class="info">
 					<div class="name">Nepali Fm Radio</div>
+<script>
+let vid = document.getElementById("fm");
+fm.onplay = function() {
+  const buttonDiv =  document.getElementById("playing");
+  buttonDiv.style.border = '0.1em solid lime';
+};
+fm.onpause = function() {
+const buttonDiv =  document.getElementById("playing");
+  buttonDiv.style.border = 'none';
+};
+</script> 
 					<div class="singer"></div>
 				</div>
-				<div class="controls">
+				<div id="myaudio" class="controls">
 					<button class="ply-btn"><i class="icon-play"></i></button>
 					<div class="progressBar"><span class="progress"></span></div>
-					<div class="time"><span class="Ctime">0:00</span>/<span class="Ttime">0.00</span></div>
+					<div class="time"><span class="Ctime">0:00</span>/<span class="Ttime">live stream</span></div>
 <br>
 					<button class="noVol"><i class="icon-volume-medium"></i></button>
 					<div class="vol"><span class="nowVol"></span></div>
