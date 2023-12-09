@@ -3,7 +3,7 @@ importScripts('https://unpkg.com/workbox-runtime-caching@1.3.0/build/importScrip
 importScripts('https://unpkg.com/workbox-routing@1.3.0/build/importScripts/workbox-routing.prod.v1.3.0.js');
 
 const assetRoute = new workbox.routing.RegExpRoute({
-    regExp: new RegExp('^https://khumnath.github.io/nepali-fm-player/*'),
+    regExp: new RegExp('^/*'),
     handler: new workbox.runtimeCaching.CacheFirst()
 });
 

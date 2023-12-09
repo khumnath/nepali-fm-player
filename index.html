@@ -9,13 +9,13 @@
 <link rel="stylesheet" href="style/fonts.css">
 <link href="style/style.css" rel="stylesheet">
 <script type="text/javascript" src="js/manager.js"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
 </head>
 <body>
 	<div class="wrapper">
 		<div class="play-wrapper">
-			<img class="cover" src="img/onair.jpg">
-		    <audio autoplay class="music" controls="true" src="audio/intro.mp3">
+			<center><img class="cover" src="img/onair.jpg"></center>
+			<iframe src="audio/intro.mp3" type="audio/mp3" allow="autoplay" controls="false" type="audio" style="display:none"></iframe>
+		    <audio autoplay preload="auto" class="music" controls="true">
 				  Your browser does not support the audio tag.
 			</audio>
 			<div class="detail">
@@ -45,12 +45,8 @@
 		</div>
 	</div>
 <div class=footer>
-made with &hearts; by khumnath
+made with &hearts; by khumnath  <a class="button" href="#popup1"><img src="img/info.png" alt="about"></a>
 </div>
-<div class="box">
-	<a class="button" href="#popup1">about</a>
-</div>
-
 <div id="popup1" class="overlay">
 	<div class="popup">
 		<h2>nepali-fm-player</h2>
@@ -63,7 +59,7 @@ made with &hearts; by khumnath
 <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-            navigator.serviceWorker.register('https://khumnath.github.io/nepali-fm-player/sw.js?v=4').then(function(registration) {
+            navigator.serviceWorker.register('/w.js?v=4').then(function(registration) {
             // Registration was successful
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }, function(err) {

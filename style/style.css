@@ -1,34 +1,36 @@
 @charset "UTF-8";
 *{
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-	/* background-color: #333333; */
+	padding-left: initial;
+	padding-right: 0;
+	list-style-type: revert-layer;
 }
 .wrapper{
 	border: 1px solid rgba(7,17,27,0.2);
 	box-shadow: -1px 0px 15px #181619bd;
-	width: 80%;
+	width: 60%;
 	margin: 10px auto;
 }
 .play-wrapper{
 	display: flex;
 	position: relative;
-	/* width: fit-content; */
+	width: -webkit-fill-available;
 	border-bottom: 1px solid rgba(7,17,27,0.2);
-	background-color: #101312;
+	background-color: #52034a;
+	flex-direction: column;
 }
 .play-wrapper img{
-	flex: 0 0 34%;
-	width:100px;
-	height: 129px;
+	width: 220px;
+	height: 220px;
+	object-position: center;
+	border-radius: 100%;
 }
 .blur {	
-    filter: blur(0px);
+    filter: blur(0.6px);
 }
 .play-wrapper .detail{
 	box-sizing: border-box;
-	padding-left: 23%;
+	margin-left: auto;
+	margin-right: auto;
 	padding-top: 10px;
 	flex:1;
 }
@@ -37,7 +39,7 @@
 	margin-bottom: 10px;
 }
 .play-wrapper .detail .info .name{
-	font-size: 25px;
+	font-size: 1.5rem;
 	line-height: 1.2;
 	font-weight: 700;
 	color: #cbd1ea;
@@ -58,7 +60,7 @@
 	/* text-align: center; */
 	border-radius: 50%;
 	color: #5be03a;
-	background-color: #101312;
+	background-color: #52034a;
 	cursor: pointer;
 	border:none;
 	-moz-box-shadow:-1px 0px 10px #333333;
@@ -88,7 +90,7 @@ button:focus{
 	border-radius: 4px;
 }
 .play-wrapper .controls .time{
-	color: #5956ff;
+	color: #ffffff;
 	/* font-size: large; */
 	margin-right: 5px;
 }
@@ -98,7 +100,7 @@ button:focus{
 	border: none;
 	width: 24px;
 	height: 34px;
-	background-color: #101312;
+	background-color: #52034a;
 	color: #5be03a;
 	font-size: x-large;
 }
@@ -154,7 +156,7 @@ button:focus{
 .list ul li{
 	height: 27px;
 	border-top: 1px solid rgb(35 131 228 / 20%);
-	padding:0 20px;
+	padding:0 4px;
 	position: relative;
 	cursor: pointer;
 	color: #274bd8;
@@ -188,16 +190,20 @@ button:focus{
 }
 .list ul li span.songSinger{
 	position: absolute;
-	right: 54px;
-	margin-right: 0;
-	display: inline-block;
-	text-align: right;
+	right: 10px;
+	/* margin-right: 0; */
+	/* display: inline-block; */
+	/* text-align: right; */
 }
 
 .footer {
-    font-size: small;
+    font-size: 1rem;
     text-align: center;
-    text-shadow: 1px 0px 2px #c30f0f;
+    text-shadow: 1px 1px 3px #000000;
+}
+.footer img {
+	width: 16px;
+	height: 16px;
 }
 
 .box {
@@ -213,10 +219,8 @@ button:focus{
 
 .button {
   font-size: 1em;
-  padding: 10px;
+  padding: 2px;
   color: #3770b7;
-  border: 2px solid #06D85F;
-  border-radius: 20px/50px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease-out;
@@ -232,7 +236,6 @@ button:focus{
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
 }
@@ -247,8 +250,8 @@ button:focus{
   background: #fff;
   border-radius: 5px;
   width: 30%;
+  height:20%;
   position: relative;
-  transition: all 5s ease-in-out;
 }
 
 .popup h2 {
@@ -258,9 +261,8 @@ button:focus{
 }
 .popup .close {
   position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
+  top: 86%;
+  right: 50%;
   font-size: 30px;
   font-weight: bold;
   text-decoration: none;
@@ -270,15 +272,34 @@ button:focus{
   color: #06D85F;
 }
 .popup .content {
-  max-height: 30%;
+  max-height: 50%;
   overflow: auto;
 }
-
-@media screen and (max-width: 700px){
-  .box{
-    width: 70%;
+.popup1.overlay  {
+	width: auto;
+}
+  .about{
+    text-align: center;
   }
   .popup{
     width: 70%;
   }
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	}
+@media screen and (max-width: 700px){
+.wrapper{
+	border: 1px solid rgba(7,17,27,0.2);
+	box-shadow: -1px 0px 15px #181619bd;
+	width: 90%;
+	margin: 10px auto; }
+.play-wrapper img{
+	width: 160px;
+	height: 160px;
+	object-position: center;
+	border-radius: 100%;
+}
 }
