@@ -36,6 +36,12 @@ window.onload=function(){
                         author:'106.3 MHZ kathmandu',
                         cover:'img/radioaudio.png'
                     },
+                    {
+                        src:'https://live.itech.host:9598/stream',
+                        name:'shreenagar fm',
+                        author:'93.2 MHZ tansen palpa',
+                        cover:'img/shreenagarfm.png'
+                    },
                     
                 ]
 		});
