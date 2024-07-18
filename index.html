@@ -72,7 +72,7 @@ made with &hearts; by khumnath  <a class="button" href="#popup1"><img src="img/i
 <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/nepali-fm-player/w.js?v=4').then(function(registration) {
+            navigator.serviceWorker.register('/nepali-fm-player/sw.js?v=4').then(function(registration) {
             // Registration was successful
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }, function(err) {
