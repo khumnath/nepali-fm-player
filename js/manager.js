@@ -38,14 +38,11 @@
             this.initialList();
             this.listCircle();
             this.addEvent();
-            this.music.volume = 0.5;
             this.updateSong(0);
-            this.music.muted = true;
             this.music.play().then(() => {
                 this.music.muted = false;
             }).catch((error) => {
                 console.log('Autoplay failed', error);
-                this.music.muted = true;
                 this.music.play();
             }); // Add autoplay with error handling
         },
