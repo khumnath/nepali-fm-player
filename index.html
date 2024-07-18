@@ -16,8 +16,8 @@
 		<div class="play-wrapper">
 			<center><img id="playing" class="cover" src="img/onair.jpg"></center>
 
-			<iframe src="audio/silence.mp3" type="audio/mp3" allow="autoplay" controls="false" type="audio" style="display:none"></iframe>
-		    <audio id="fm" preload="auto" class="music" controls autoplay>
+			
+		    <audio id="fm" preload="auto" class="music" controls autoplay muted>
 				  Your browser does not support the audio tag.
 			</audio>
 			<div class="detail">
@@ -72,7 +72,7 @@ made with &hearts; by khumnath  <a class="button" href="#popup1"><img src="img/i
 <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/w.js?v=4').then(function(registration) {
+            navigator.serviceWorker.register('/nepali-fm-player/w.js?v=4').then(function(registration) {
             // Registration was successful
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
         }, function(err) {
