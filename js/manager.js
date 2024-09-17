@@ -46,6 +46,9 @@
             this.songName.innerHTML = song.name;
             this.author.innerHTML = song.author;
             this.Ttime.innerHTML = '0.00'; // Reset Ttime to default value initially
+            this.music.load(); // Ensure stream is loaded
+            this.music.play(); // Play the stream
+            document.title = `${song.name} - ${song.author}`;
         },
         initialList() {
             const list = document.createElement('ul');
@@ -57,7 +60,6 @@
                 item.append(song.name);
                 item.addEventListener('click', () => {
                     this.updateSong(index);
-                    this.music.play();
                 });
                 list.appendChild(item);
                 this.checkStreamStatus(song.src, statusDot);
@@ -73,7 +75,6 @@
             audio.addEventListener('error', () => {
                 statusDot.classList.add('offline');
             });
-            // Attempt to load the stream
             audio.load();
         },
         hideControls() {
@@ -112,9 +113,9 @@
                 this.nextSong();
             });
             this.progressBar.addEventListener('mousedown', this.startSeek.bind(this));
-            this.progressBar.addEventListener('touchstart', this.startSeek.bind(this), { passive: true });
+            this.progressBar.addEventListener('touchstart', this.startSeek.bind(this));
             this.vol.addEventListener('mousedown', this.startVolume.bind(this));
-            this.vol.addEventListener('touchstart', this.startVolume.bind(this), { passive: true });
+            this.vol.addEventListener('touchstart', this.startVolume.bind(this));
             this.noVol.addEventListener('click', () => {
                 if (this.music.muted) {
                     this.music.muted = false;
@@ -181,7 +182,7 @@
             this.music.play().then(() => {
                 this.music.muted = false;
             }).catch((error) => {
-                console.log('Autoplay failed');
+                console.log('Autoplay failed', error);
                 this.music.play();
             });
         },
@@ -198,7 +199,7 @@
             this.isSeeking = true;
             document.addEventListener('mousemove', this.seek.bind(this));
             document.addEventListener('mouseup', this.stopSeek.bind(this));
-            document.addEventListener('touchmove', this.seek.bind(this), { passive: true });
+            document.addEventListener('touchmove', this.seek.bind(this));
             document.addEventListener('touchend', this.stopSeek.bind(this));
             this.seek(e);
         },
@@ -220,7 +221,7 @@
             this.isAdjustingVolume = true;
             document.addEventListener('mousemove', this.adjustVolume.bind(this));
             document.addEventListener('mouseup', this.stopVolume.bind(this));
-            document.addEventListener('touchmove', this.adjustVolume.bind(this), { passive: true });
+            document.addEventListener('touchmove', this.adjustVolume.bind(this));
             document.addEventListener('touchend', this.stopVolume.bind(this));
             this.adjustVolume(e);
         },
